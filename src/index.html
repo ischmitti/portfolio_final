@@ -3,60 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>21 - Scroll base animation</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Ilya Schmitt</title>
 </head>
 <body>
     <canvas class="webgl"></canvas>
+    <header id="navbar">
+        <label for="check">
+          <input type="checkbox" id="check">
+            <div class="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="navbar-nav fade-in">
+              <div class="nav-link"><a href="/">home</a></div>
+              <div class="nav-link"><a href="resume">resume</a></div>
+              <div class="nav-link"><a href="mailto:ilyaschmitt@gmail.com">contact</a></div>
+            </div>
+          </label>
+    </header>
     <section id="hero" class="section">
         <div class="tablet">
-            <div class="time-container">
-                <p id="time">10:08</p>
-                <p id="date">Monday, March 07</p>
-                <p id="location">Frankfurt, Germany</p>
-            </div>
             <div class="content">
-                <div class="cases">
-                    <div class="intro">
+                <div class="time-container">
+                    <p id="time">10:08</p>
+                    <p id="date">Monday, March 07</p>
+                    <p id="location">Frankfurt, Germany</p>
+                </div>
+                <div class="hero-cases">
+                    <div class="intro box-style">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus elit egestas, dictum libero ut, sodales elit. Sed non sem erat. Etiam erat nisi, sagittis et dignissim sit amet, maximus et lorem.</p>
-              
+                            Bienvenido, Welcome & Willkommen
+                        </p>
+                        <br>
+                        <p>
+                            My name is Ilya and I am a Frontend Developer & Designer.
+                        </p>
                     </div>
-                    <div class="work-case">
-                        <img src="../static/images/Open Doodles - Ice Cream.png" alt="">
-                    </div>
-                    <div class="resume-case">
-                        <img src="../static/images/Open Doodles - Ice Cream.png" alt="">
+                    <div class="hero-images-row">
+                            <img class="box-style-img hero-img img-1" src="../static/images/Open Doodles - Ice Cream.png" alt="">
+                            <img class="box-style-img hero-img img-2" src="../static/images/Open Doodles - Ice Cream.png" alt="">
                     </div>
                 </div>
             </div>
             <div class="navigation">
-                <button class="icon">
-                    <img src="../static/images/envelope-solid.svg" alt="contact">
-                  </button>
-                  <button class="icon">
+                  <a class="icon" href="#work">
                     <img src="../static/images/folder-solid.svg" alt="work">
-                  </button>
-                  <button class="icon">
+                  </a>
+                  <a class="icon" href="resume">
                     <img src="../static/images/file-lines-solid.svg" alt="resume">
-                  </button>
-                  <button class="icon">
+                  </a>
+                  <a class="icon" href="#about">
                     <img src="../static/images/address-card-solid.svg" alt="about">
-                  </button>
+                  </a>
             </div>
         </div>
     </section>
-    <section id="hero" class="section">
-        <div class="work-contaner">
-            <h2>Work</h2>
-            <button>
+    <section id="work" class="section">
+        <div class="work-container">
+            <h2 class="work-heading">Work</h2>
+            <div class="work-row">
+                <button  class="work-card">
+                    <img src="../static/images/composition-3.png" alt="">
+                    <p>Lorem Ipsum</p>
+                </button>
+                <button  class="work-card">
+                    <img src="../static/images/composition-3.png" alt="">
+                    <p>Lorem Ipsum</p>
+                </button>
+            </div>
+            <div class="work-row">
+                <button class="work-card">
+                    <img src="../static/images/composition-3.png" alt="">
+                    <p>Lorem Ipsum</p>
+                </button>
                 
-            </button>
+                
+                <button class="work-card">
+                    <img src="../static/images/composition-3.png" alt="">
+                    <p>Ipsum</p>
+                </button>
+            </div>
         </div>
     </section>
-    <section id="hero" class="section">
+    <section id="about" class="section">
         <div class="tablet">
-
+            <div class="content">
+                <div class="time-container">
+                    <h2>about me</h2>
+                </div>
+                <div class="description-row">
+                    <div class="description box-style">
+                        <p>I grew up in Frankfurt, Germany where I am currently finishing my Bachelor of Science in Computer Science.
+                            I love the Web and to contribute creative content. I am huge fan of simple design.
+                        </p>
+                        <br>
+                    <h3>
+                        Analyse, Design & Develop
+                    </h3>
+                    <p>is the structure I like to follow. Analyzing and Understanding Brand, Product and Company is a necesity.
+                        <br>
+                        The Design needs to impress and perform.
+                        <br>
+                        I prefer building my websites from the ground up. 
+                    </p>
+                    <br>
+                    <p>
+                        <b>Outside of Webdevelopment </b> I am competitor in Brasilian Jiu-Jitsu with international success,
+                        Anime Otaku, passionate cook and traveler. 
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                
+                    <h3>
+                        contact me
+                    </h3>
+                </div>
+                    <div class="profile">
+                        <img class="box-style-img" src="/static/images/Open Doodles - Ice Cream.png" alt="">
+                    </div>
+            </div>
+            <div class="navigation">
+                <a class="icon" href="mailto:ilyaschmitt@gmail.com">
+                    <img src="../static/images/envelope-solid.svg" alt="contact">
+                </a>
+                <a class="icon" id="up-button">
+                        <h3 class="up">UP</h3>
+                </a>
+            </div>
+        </div>
         </div>
     </section>
-</body>
+    <footer>
+        <p>Copyright &copy; 2022. All rights reservered</p>
+      </footer>
+      <script type="module" src="script.js"></script>
+    </body>
 </html>
