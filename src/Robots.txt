@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /privacypolicy
+Disallow: /legalnotice
+Sitemap: https://ilyaschmitt.co/sitemap.xml
