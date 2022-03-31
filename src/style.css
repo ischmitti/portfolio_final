@@ -95,7 +95,7 @@ h1,h2,h3{
 }
 h1{
     font-size: 1.6em;
-    color: #8c75b3;
+    color: #6781C5;
 }
 h3{
     font-size: 1.4em;
@@ -126,13 +126,14 @@ h4{
     left: 50px;
     width: 30px;
     top: 135px;
-    height: 2px;
-    background: #000;
+    height: 3px;
+    background: #6781C5;
     display: block;
     -webkit-transform-origin: center;
     transform-origin: center;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    border-radius: 12px;
   }
   
 a{
@@ -225,11 +226,24 @@ a{
     letter-spacing: 2px;
     color: black;
   }
+  .nav-name{
+    font-size: 1.4em;
+    font-weight: 700;
+    color:#6781C5;
+  }
   
   #navbar{
     display: none;
   }
   
+  .name{
+    position: absolute;
+    top: 0.25em;
+    left: 1em;
+    color: #ffeded;
+    font-size: 1.5em;
+    font-weight: 900;
+  }
 
 .section
 {
@@ -282,7 +296,7 @@ a{
     margin-top: 8px;
     width: 50px;
     height: 8px;
-    background-color: #8c75b3;
+    background-color: #6781C5;
     border-radius: 12px;
 }
  
@@ -350,9 +364,7 @@ a{
 }
   
 .icon img{
-    /* filter: brightness(0) invert(1); */
-    /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
-    max-height: 35px;
+    filter: invert(53%) sepia(33%) saturate(706%) hue-rotate(186deg) brightness(88%) contrast(85%);    max-height: 35px;
     border-radius: 0;
 }
 
@@ -387,11 +399,12 @@ a{
 
 .card-inner p{
     margin: 0.25em 1em 0;
-    font-size: 1.4em;
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #6781C5;
 }
 .about-caption{
-    color: #8c75b3;
+    color: #6781C5;
 }
 
 #about{
@@ -406,6 +419,7 @@ a{
     margin-top: 4px;
     font-size: 1.6em;
     font-weight: 900;
+    color: #6781C5;
 }
 
 

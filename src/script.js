@@ -288,7 +288,11 @@ window.onload = ()=>{
         if(minutes < 10){
         minutes = '0'+minutes
         }
-        const time = today.getHours() + ":" + minutes
+        let hours = today.getHours()
+        if(hours < 10){
+            hours = '0'+hours
+        }
+        const time = hours + ":" + minutes
         const month = today.getMonth()
         const weekday = today.getDay()
         let day = today.getDate()
