@@ -28,7 +28,6 @@
     src: url('fonts/Raleway/static/Raleway-Light.ttf');
     font-weight: 300;
   }
-
 *
 {
     margin: 0;
@@ -40,9 +39,10 @@ html{
 body
 {
     background: #1e1a20;
-    color: #403B3B;
+    color: #4e4b52;
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
+    position: relative;
 }
 .webgl
 {
@@ -68,19 +68,33 @@ button{
 }
 
 footer{
+    position: relative;
     text-align: center;
     padding: 2em;
   }
   
-footer p{
+footer a, footer p{
   font-size: 18px;
-  color: #ffeded ;
+  margin: 0.7em;
+  color: #ffeded;
+}
+footer a:hover{
+    color: #6781C5;
+    font-weight: 700;
 }
 
+footer a:active{
+    background-color: #ccc;
+}
+footer img{
+    width: 30px;
+    height: 30px;
+}
 a{
     text-decoration: none;
+    cursor: pointer;
+    color: #333;
 }
-
 p{
     font-size: 17px;
     line-height: 1.3;
@@ -88,20 +102,22 @@ p{
 }
 h2{
     font-size: 1.6em;
-    font-weight: 800;
+    font-weight: 900;
 }
 h1,h2,h3{
     line-height: 1.5;
 }
 h1{
-    font-size: 1.6em;
+    font-size: 1.7em;
     color: #6781C5;
+    font-weight: 900;
 }
 h3{
     font-size: 1.4em;
 }
 h4{
     font-size: 1.25em;
+    font-weight: 800;
 }
 
 
@@ -110,7 +126,7 @@ h4{
     position: fixed;
     right: -100px;
     top: -100px;
-    z-index: 100;
+    z-index: 1000;
     width: 200px;
     height: 200px;
     background: #FFF5F5;
@@ -121,7 +137,7 @@ h4{
     cursor: pointer;
   }
   
-  span{
+span{
     position: absolute;
     left: 50px;
     width: 30px;
@@ -136,10 +152,6 @@ h4{
     border-radius: 12px;
   }
   
-a{
-      text-decoration: none;
-      color: #333;
-  }
   
   a:active .menu{
     box-shadow: 0 0 0 0 #FFF5F5, 0 0 0 0 #FFF5F5;
@@ -210,7 +222,7 @@ a{
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 200;
+    z-index: 1001;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -231,19 +243,14 @@ a{
     font-weight: 700;
     color:#6781C5;
   }
-  
   #navbar{
     display: none;
   }
-  
+
   .name{
-    position: absolute;
-    top: 0.25em;
-    left: 1em;
-    color: #ffeded;
-    font-size: 1.5em;
-    font-weight: 900;
+    display: none;
   }
+  
 
 .section
 {
@@ -253,6 +260,7 @@ a{
     position: relative;
     padding-bottom: 4em;
 }
+
 .tablet{
     display: flex;
     flex-direction: column;
@@ -314,15 +322,14 @@ a{
 .img-1{
     top:100px;
     left: 0px;
-    z-index: 100;
+    z-index: 50;
 }
 
 .img-2{
     top: 0px;
     right:0px;
-    transform:translateY(0)
+    transform:translateY(0);
 }
-
 .box-style-img{
     box-shadow: 0.5px 0.5px 5px #ddd;
     border-radius: 12px;
@@ -336,7 +343,7 @@ a{
 }
 
 .navigation{
-    z-index: 1;
+    z-index: 100;
     position: absolute;
     left:0;
     bottom: 0;
@@ -383,26 +390,33 @@ a{
     font-weight: 900;
 }
 
+.work-heading:hover{
+    color: #6781C5;
+}
+
 .card-container {
     perspective: 40px;
   }
-  
-
 .card-inner {
     border-radius: 12px;
     margin-bottom: 2em;
     padding-bottom: 1em;
-    background-color: #ffeded;
-    text-align: left;
+    border: 1px solid #ffeded75;
+    text-align: center;
     transition: transform 0.2s;
-  }
-
-.card-inner p{
-    margin: 0.25em 1em 0;
-    font-size: 1.5em;
-    font-weight: 800;
-    color: #6781C5;
 }
+.card-inner p{
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #ffeded;
+}
+.card-inner:hover{
+    background-color: #ffeded;
+}
+.card-inner:hover p{
+    color: #6781C5
+}
+
 .about-caption{
     color: #6781C5;
 }
@@ -421,8 +435,6 @@ a{
     font-weight: 900;
     color: #6781C5;
 }
-
-
 .shake{
     animation: shake 500ms;
 }
@@ -441,11 +453,59 @@ a{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-@media screen and (max-width: 600px){
+.xtra-padding{
+    padding: 2em;
 }
 
+#modal{
+    display: none;
+    left: 0%;
+    top: 0%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: auto; 
+    z-index: 1500;
+    background-color: #ffeded;
+}
+#close{
+    float: right;
+    margin: 2em;
+    width: 5em;
+    height: 5em;
+}
+
+#legal{
+    display: none;
+}
+
+#privacy{
+    display: none;
+}
+
+@media screen and (max-height: 700px) {
+    .img-1{
+        top:60px;
+    }
+    
+    .img-2{
+        top: -10px;
+    }
+}
 
 @media screen and (min-width: 500px) {
+    #hero{
+        padding-top: 2em;
+    }
+    .name{
+        display: block;
+        position: absolute;
+        top: 0.25em;
+        left: 0.5em;
+        color: #ffeded;
+        font-size: 1.5em;
+        font-weight: 900;
+    }
     .section{
         padding: 0 10% 2.5em 10%;
         justify-content: center;
@@ -499,9 +559,6 @@ a{
 }
 
 @media screen and (min-width: 768px){ 
-    #hero{
-        margin-top: 2em;
-    }
     #work{
         margin: 5em 0;
     }
@@ -527,10 +584,10 @@ a{
     }
     h1{
         font-size: 1.7em;
-        font-weight: 700;
     }
     h3{
         font-size: 1.45em;
+        font-weight: 800;
     }
 }
 
@@ -620,11 +677,10 @@ a{
         margin-left: 0em;
     }
     .profile img{
-        width: 100%;
+        width: 70%;
     }
     h1{
         font-size: 1.8em;
-        font-weight: 800;
     }
     h3{
         font-size: 1.5em;

@@ -51,14 +51,17 @@ window.onload = ()=>{
         new THREE.BoxBufferGeometry(0.35, 0.35, 0.35, 16),
         material
     )
+
+
     if(window.innerWidth >= 1200){   
-        mesh1.position.x = -2.6
-        mesh2.position.x = 2.6
-        mesh3.position.x = -2.6
+        mesh1.position.x = -2.2
+        mesh2.position.x = 2.2
+        mesh3.position.x = -2.2
 
         mesh1.position.y =  objectsDistance * 0.3
         mesh2.position.y = - objectsDistance * 0.7
         mesh3.position.y = - objectsDistance * 1.7
+
         
     }else{
         mesh1.position.x = 0
@@ -73,7 +76,7 @@ window.onload = ()=>{
 
     scene.add(mesh1, mesh2, mesh3)
 
-    const sectionMeshes = [ mesh1, mesh2, mesh3 ]
+    const sectionMeshes = [ mesh1, mesh2, mesh3]
 
     /**
      * Lights
@@ -278,11 +281,19 @@ window.onload = ()=>{
 
     }
 
+    if(window.innerHeight<=700 ){
+        const heroimg = document.getElementsByClassName("hero-img")
+        const multiply = (window.innerHeight +150) / 1000
+        for(let i=0; i<2;i++){
+            heroimg[i].style.height = (heroimg[1].clientHeight * multiply)+'px' 
+            heroimg[i].style.width = (heroimg[1].clientWidth * multiply)+'px' 
+        }
+    }
 
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'Juli', 'August', 'September', 'October', 'November', 'December']
     const weekdays = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-    function getTime(){
+    function updateTime(){
         const today = new Date();
         let minutes = today.getMinutes()
         if(minutes < 10){
@@ -301,9 +312,11 @@ window.onload = ()=>{
         }
         document.getElementById('time').textContent = time
         document.getElementById('date').textContent =weekdays[weekday] + ', '+day + '. ' + months[month]
+
+        setTimeout(updateTime, 1000)
     }
 
-    getTime()
+    updateTime()
 
     function navbarShow(){
         const navbar = document.getElementById('navbar')
@@ -431,4 +444,24 @@ window.onload = ()=>{
         }
     })
     }
+    const modal = document.getElementById('modal')
+    const legalbtn = document.getElementById("legal-btn")
+    const legal = document.getElementById("legal")
+    const privacybtn = document.getElementById("privacy-btn")
+    const privacy = document.getElementById("privacy")
+    const close = document.getElementById("close")
+    legalbtn.addEventListener('click',() => {
+        modal.style.display ="block"
+        legal.style.display ="block"
+    })
+    privacybtn.addEventListener('click',() => {
+        modal.style.display ="block"
+        privacy.style.display ="block"
+    })
+    close.addEventListener('click',() => {
+        modal.style.display ="none"
+        privacy.style.display ="none"
+        legal.style.display = "none"
+    })
+
 }
