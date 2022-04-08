@@ -281,6 +281,9 @@ window.onload = ()=>{
 
     }
 
+
+    // Resize Hero Image
+
     if(window.innerHeight<=700 ){
         const heroimg = document.getElementsByClassName("hero-img")
         const multiply = (window.innerHeight +150) / 1000
@@ -290,8 +293,11 @@ window.onload = ()=>{
         }
     }
 
+    //Get Current Time in FFM
+
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'Juli', 'August', 'September', 'October', 'November', 'December']
     const weekdays = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
 
     function updateTime(){
         const today = new Date();
@@ -318,6 +324,7 @@ window.onload = ()=>{
 
     updateTime()
 
+
     function navbarShow(){
         const navbar = document.getElementById('navbar')
          const body = document.getElementsByTagName('body')[0]
@@ -328,7 +335,7 @@ window.onload = ()=>{
             }
         }
         
-        const img1 = document.getElementById('img-1')
+    const img1 = document.getElementById('img-1')
         function imgScrollTop(){
             if(window.innerWidth<600){
                 let scrollValue = -0.25 * window.scrollY
@@ -342,6 +349,9 @@ window.onload = ()=>{
             navbarShow()
                 
         })
+
+
+    
 
     const img2 = document.getElementById('img-2')
     const work = document.getElementById('work-button')
@@ -372,6 +382,8 @@ window.onload = ()=>{
         }
     }
     imgHover()
+
+    //Create Tild Effekt on Feature Cards
 
     const container = document.getElementsByClassName('card-container');
     const inner = document.getElementsByClassName('card-inner');
@@ -406,8 +418,7 @@ window.onload = ()=>{
                 return counter++ % updateRate === 0;
             };
             
-            // Mouse 
-            var mouse = {
+            const mouse = {
                 _x: 0,
                 _y: 0,
                 x: 0,
@@ -444,6 +455,7 @@ window.onload = ()=>{
         }
     })
     }
+
     const modal = document.getElementById('modal')
     const legalbtn = document.getElementById("legal-btn")
     const legal = document.getElementById("legal")
